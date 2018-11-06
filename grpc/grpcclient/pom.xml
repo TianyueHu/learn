@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>io.grpc</groupId>
-            <artifactId>grpc-core</artifactId>
+            <artifactId>grpc-all</artifactId>
             <version>1.15.0</version>
         </dependency>
         <dependency>
@@ -25,11 +25,6 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>3.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-stub</artifactId>
-            <version>1.15.0</version>
         </dependency>
 
     </dependencies>
