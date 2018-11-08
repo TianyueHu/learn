@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "personal.grpcproto";
+option java_outer_classname = "SimpleProto";
+
+
+service SimpleGreeter {
+    rpc SayHello (SimpleRequest) returns (SimpleResponse) {}
+}
+
+message SimpleRequest {
+    string name = 1;
+}
+
+message SimpleResponse {
+    string message = 1;
+}

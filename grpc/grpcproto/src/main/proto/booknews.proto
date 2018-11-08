@@ -1,0 +1,20 @@
+
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "personal.grpcproto";
+option java_outer_classname = "BookNewsProto";
+
+service BookNews {
+    rpc bookNews (BookRequest) returns (stream News) {}
+}
+
+message BookRequest {
+    string name = 1;
+}
+
+message News {
+    string name = 1;
+    string news = 2;
+}
