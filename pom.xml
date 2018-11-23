@@ -12,6 +12,7 @@
         <module>spring</module>
         <module>standard</module>
         <module>grpc</module>
+        <module>zkclient</module>
     </modules>
 
 
