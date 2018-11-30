@@ -1,7 +1,8 @@
-package container.linkedBlockingDeque;
+package learn.standard.java.util.linkedBlockingQueue;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
+import learn.standard.java.bean.Sweet;
 
 public class Consumer implements Runnable{
     private LinkedBlockingQueue<Sweet> linkedBlockingQueue;
