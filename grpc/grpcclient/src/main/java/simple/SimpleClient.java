@@ -31,8 +31,8 @@ public class SimpleClient {
 		SimpleRequest request = SimpleRequest.newBuilder().setName(name).build();
 		SimpleResponse response;
 		try{
-		response = blockingStub.sayHello(request);
-		System.out.println(response.toString());
+		    response = blockingStub.sayHello(request);
+		    System.out.println(response.toString());
 		}
 		catch (Exception e){
 			e.printStackTrace();
