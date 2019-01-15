@@ -1,4 +1,4 @@
-package container.linkedBlockingDeque;
+package learn.standard.java.bean;
 
 public class Sweet {
 
