@@ -13,6 +13,7 @@
         <module>standard</module>
         <module>grpc</module>
         <module>zkclient</module>
+        <module>designpattern</module>
     </modules>
 
 
