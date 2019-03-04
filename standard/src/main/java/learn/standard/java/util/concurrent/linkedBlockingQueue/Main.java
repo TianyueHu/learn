@@ -1,4 +1,4 @@
-package learn.standard.java.util.linkedBlockingQueue;
+package learn.standard.java.util.concurrent.linkedBlockingQueue;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import learn.standard.java.bean.Sweet;

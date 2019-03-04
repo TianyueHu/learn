@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="consumer" />
+
+    <dubbo:registry address="zookeeper://10.10.103.96:2181" />
+
+    <dubbo:protocol name="dubbo" port="20880" />
+
+    <dubbo:reference interface="learn.saga.api.FlightService"
+                     id="hzt_flight" loadbalance="consistenthash ">
+        <dubbo:parameter key="hash.arguments" value="0" />
+    </dubbo:reference>
+    <dubbo:reference interface="learn.saga.api.HotelService"
+                     id="hzt_hotel" loadbalance="consistenthash ">
+        <dubbo:parameter key="hash.arguments" value="0" />
+    </dubbo:reference>
+    <dubbo:reference interface="learn.saga.api.PaymentService"
+                     id="hzt_payment" loadbalance="consistenthash ">
+        <dubbo:parameter key="hash.arguments" value="0" />
+    </dubbo:reference>
+</beans>
