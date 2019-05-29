@@ -15,6 +15,7 @@
         <module>zkclient</module>
         <module>designpattern</module>
         <module>druid</module>
+        <module>agent</module>
     </modules>
 
 
