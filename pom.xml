@@ -14,6 +14,7 @@
         <module>grpc</module>
         <module>zkclient</module>
         <module>designpattern</module>
+        <module>druid</module>
     </modules>
 
 

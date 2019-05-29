@@ -1,7 +1,6 @@
 package data.repository;
 
 import data.repository.bean.Hotel;
-import data.repository.repositoryImp.SpringHotelBookingRepository;
 import data.repository.repositoryImp.SpringHotelRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

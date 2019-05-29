@@ -3,21 +3,29 @@ package schedule;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
-
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class ScheduleWithFixedDelayTest {
 
+    private static long time = System.currentTimeMillis();
     final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
     public void run(){
 
         scheduler.scheduleAtFixedRate(()->{
-            System.out.println("start");
-            throwsException(null);
+            long startTime = System.currentTimeMillis();
+            System.out.println("Runnable 1" + (startTime - time));
+            //throwsException(null);
         },
         0,
-        500,
+        50,
+        MILLISECONDS);
+        scheduler.scheduleAtFixedRate(()->{
+            long startTime = System.currentTimeMillis();
+            System.out.println("Runnable 2" + (startTime - time));
+        },
+        0,
+        50,
         MILLISECONDS);
     }
 

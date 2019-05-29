@@ -4,14 +4,15 @@ import learn.standard.java.bean.Sweet;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Random;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 public class HashMapTest {
 
     public static void main(String[] args) throws Exception{
         //HashMapTest.ifKeysChanged();
-        HashMapTest.forEachTraverseAndDelete();
+        //HashMapTest.forEachTraverseAndDelete();
+        HashMapTest.howToUseIterator();
     }
 
     public static void ifKeysChanged() throws Exception{
@@ -70,6 +71,28 @@ public class HashMapTest {
         traverseThread1.start();
         deleteThread.start();
         traverseThread2.start();
+    }
+
+    public static void howToUseIterator(){
+        HashMap<Integer, Integer> map = new HashMap();
+        IntStream.range(0, 1000).forEach(i -> map.put(i, i + 100));
+
+        Iterator<Integer> keyIter = map.keySet().iterator();
+        while(keyIter.hasNext()){
+            System.out.print(keyIter.next() + ", ");
+        }
+        System.out.println();
+        Iterator<Integer> valIter = map.values().iterator();
+        while(valIter.hasNext()){
+            System.out.print(valIter.next() + ", ");
+        }
+        System.out.println();
+        Iterator<Map.Entry<Integer, Integer>> entryIter = map.entrySet().iterator();
+        while(entryIter.hasNext()){
+            Map.Entry entry = entryIter.next();
+            System.out.print("(" + entry.getKey() + "," + entry.getValue() + "), ");
+        }
+
     }
 
 }

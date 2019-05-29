@@ -1,6 +1,6 @@
 package com.learn.saga.client.service;
 
-import org.apache.servicecomb.saga.omega.context.annotations.SagaStart;
+//import org.apache.servicecomb.saga.omega.context.annotations.SagaStart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class HolidayService {
     @Autowired
     private PaymentService payment;
 
-    @SagaStart(timeout = 20)
+    //@SagaStart(timeout = 20)
     public String holidayPlan(String user) throws Throwable{
 
         double fee = flight.bookFlight(user);
